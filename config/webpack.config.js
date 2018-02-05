@@ -1,15 +1,8 @@
 const path = require('path')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const nodeModules = require('webpack-node-externals')
 const DEV_MODE = process.env.NODE_ENV !== 'production'
 
-// const extractSass = new ExtractTextPlugin({
-//   filename: '[name].[contenthash].css',
-//   disable: false
-// })
-
 module.exports = {
-  // mode: 'production',
   target: 'node',
 
   entry: './src/index.js',
@@ -105,6 +98,5 @@ module.exports = {
   },
 
   plugins: [
-    // extractSass
   ]
-}
+};
