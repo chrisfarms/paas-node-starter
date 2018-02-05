@@ -1,0 +1,4 @@
+{% macro field(name, value='', type='text') %}
+	  <input type="{{ type }}" name="{{ name }}" value="{{ value | escape }}" />
+	</div>
+{% endmacro %}

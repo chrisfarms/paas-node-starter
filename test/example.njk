@@ -1,0 +1,13 @@
+{% extends "../src/templates/layout/main.njk" %}
+{% import "./macro.njk" as forms %}
+{% from "./macro.njk" import field %}
+
+{% block content %}
+	<div>
+		Hey {{ name }}!
+	</div>
+	<div>
+		{{ field('name') }}
+	</div>
+{% endblock %}
+

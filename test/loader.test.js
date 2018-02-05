@@ -1,0 +1,9 @@
+import compiler from './compiler.js'
+
+test('Inserts name and outputs JavaScript', async () => {
+  const {stats} = await compiler('example.js')
+  const output = stats.toJson().modules[0].source
+
+  // console.log('OUTPUT:', output)
+  expect(output).toBe(`export default "Hey Alice!\\n"`)
+})

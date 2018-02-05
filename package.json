@@ -1,0 +1,46 @@
+{
+  "name": "paas-node-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "webpack --config config/webpack.config.js",
+    "start": "npm run build && node dist/main.js",
+    "lint:js": "xo",
+    "push": "NODE_ENV=production npm run build && cf push"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@govuk-frontend/all": "0.0.22-alpha",
+    "express": "^4.16.2",
+    "apply-loader": "^2.0.0",
+    "babel-jest": "^22.1.0",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.9",
+    "extract-loader": "^1.0.2",
+    "file-loader": "^1.1.6",
+    "html-loader": "^0.5.5",
+    "jest": "^22.1.4",
+    "loader-utils": "^1.1.0",
+    "memory-fs": "^0.4.1",
+    "node-sass": "^4.7.2",
+    "nunjucks": "^3.0.1",
+    "sass-loader": "^6.0.6",
+    "schema-utils": "^0.4.3",
+    "snyk": "^1.69.6",
+    "webpack": "^3.10.0",
+    "webpack-cli": "^2.0.4",
+    "webpack-dev-middleware": "^2.0.4",
+    "webpack-node-externals": "^1.6.0",
+    "xo": "^0.18.2"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": "8.x.x"
+  },
+  "xo": {
+    "space": true
+  }
+}
